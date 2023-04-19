@@ -1,6 +1,5 @@
 package api
 
-import api.cart.cart_id
 import helpers.BaseHelpers._
 import io.gatling.core.Predef._
 import io.gatling.core.structure._
@@ -11,6 +10,6 @@ object cart_total_opt {
  def cartTotalOpt(): ChainBuilder =
    exec(
      http("Cart_with_product_total")
-       .options(s"/api/v1/cart/${cart_id}/total/")
+       .options("/api/v1/cart/${cart_id}/total/")
 )
 }
